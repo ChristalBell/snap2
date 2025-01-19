@@ -1,18 +1,25 @@
+"use client";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
+import Dropdown from "./Dropdown";
 
 const Nav = () => {
   return (
-    <Container sx={{ display: "flex", alignItems: "center" }}>
-      <Box sx={{ display: "flex" }}>
+    <Container
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+      }}
+    >
+      <Box sx={{ display: "flex", alignItems: "center" }}>
         <Image src="/logo.svg" alt="snap logo" width={87} height={35} />
-        <Typography></Typography>
-        <Typography>Features</Typography>
-        <Typography>Company</Typography>
+        <Dropdown label="Features" />
+        <Dropdown label="Company" />
         <Typography>Careers</Typography>
         <Typography>About</Typography>
       </Box>
