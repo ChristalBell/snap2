@@ -18,13 +18,14 @@ const Menu = ({ menuItems }: Props) => {
       sx={{
         borderRadius: ".625rem",
         backgroundColor: COLORS.white,
-        padding: ".5rem",
+        padding: "1.5rem",
         boxShadow: "0 10px 40px 000000",
+        position: "absolute",
       }}
     >
       {menuItems.map((item) => {
         return (
-          <Typography key={item.label}>
+          <Typography key={item.label} sx={{ margin: ".5rem" }}>
             {item.icon && (
               <Image src={item.icon} alt="icon" height={16} width={16} />
             )}

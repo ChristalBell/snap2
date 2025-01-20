@@ -29,14 +29,22 @@ const Nav = () => {
   ];
 
   return (
-    <Container
+    <Box
       sx={{
         display: "flex",
-        alignItems: "center",
+        marginTop: "2rem",
         justifyContent: "space-between",
       }}
     >
-      <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          width: "35vw",
+          padding: "0 4rem",
+        }}
+      >
         <Image src="/logo.svg" alt="snap logo" width={87} height={35} />
         {dropdownMenuItems.map((dropdownMenuItem) => {
           return (
@@ -51,11 +59,20 @@ const Nav = () => {
         <Typography>Careers</Typography>
         <Typography>About</Typography>
       </Box>
-      <Box>
+
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          width: "15vw",
+          marginRight: "4rem",
+        }}
+      >
         <Button>Login</Button>
         <Button>Register</Button>
       </Box>
-    </Container>
+    </Box>
   );
 };
 

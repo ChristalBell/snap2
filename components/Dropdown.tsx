@@ -14,7 +14,7 @@ const Dropdown = ({ label, menuItems }: Props) => {
   return (
     <Box>
       <Typography onClick={() => setIsOpen(!isOpen)}>
-        Features {isOpen ? "^" : "v"}
+        {label} {isOpen ? "^" : "v"}
         {isOpen && <Menu menuItems={menuItems} />}
       </Typography>
     </Box>
