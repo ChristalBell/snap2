@@ -2,14 +2,14 @@
 import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
-import Menu from "./Menu";
+import Menu, { MenuItem } from "./Menu";
 
 interface Props {
   label: string;
+  menuItems: MenuItem[];
 }
-const Dropdown = ({ label }: Props) => {
+const Dropdown = ({ label, menuItems }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
-  const menuItems = [{ icon: "/icon-todo.svg", label: "To Do List" }];
 
   return (
     <Box>

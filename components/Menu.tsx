@@ -4,10 +4,11 @@ import Typography from "@mui/material/Typography";
 import { COLORS } from "@/styles/colors";
 import Image from "next/image";
 
-type MenuItem = {
+export type MenuItem = {
   icon?: string;
   label: string;
 };
+
 interface Props {
   menuItems: MenuItem[];
 }
