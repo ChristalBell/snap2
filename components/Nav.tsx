@@ -6,6 +6,7 @@ import Image from "next/image";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Dropdown from "./Dropdown";
+import { COLORS } from "@/styles/colors";
 
 const Nav = () => {
   const dropdownMenuItems = [
@@ -45,7 +46,7 @@ const Nav = () => {
           padding: "0 4rem",
         }}
       >
-        <Image src="/logo.svg" alt="snap logo" width={87} height={35} />
+        <Image src="/logo.svg" alt="snap logo" width={80} height={30} />
         {dropdownMenuItems.map((dropdownMenuItem) => {
           return (
             <Dropdown
@@ -56,8 +57,16 @@ const Nav = () => {
           );
         })}
 
-        <Typography>Careers</Typography>
-        <Typography>About</Typography>
+        <Typography
+          sx={{ fontWeight: "bold", fontSize: "1rem", cursor: "pointer" }}
+        >
+          Careers
+        </Typography>
+        <Typography
+          sx={{ fontWeight: "bold", fontSize: "1rem", cursor: "pointer" }}
+        >
+          About
+        </Typography>
       </Box>
 
       <Box
@@ -69,8 +78,27 @@ const Nav = () => {
           marginRight: "4rem",
         }}
       >
-        <Button>Login</Button>
-        <Button>Register</Button>
+        <Button
+          sx={{
+            fontSize: ".75rem",
+            fontWeight: "bold",
+            color: COLORS.black,
+          }}
+        >
+          Login
+        </Button>
+        <Button
+          variant="outlined"
+          sx={{
+            borderRadius: ".75rem",
+            border: `2px solid ${COLORS.black}`,
+            color: COLORS.black,
+            fontSize: ".75rem",
+            fontWeight: "bold",
+          }}
+        >
+          Register
+        </Button>
       </Box>
     </Box>
   );

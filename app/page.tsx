@@ -1,3 +1,4 @@
+import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
 
 import Box from "@mui/material/Box";
@@ -8,6 +9,7 @@ const Home = () => {
   return (
     <Box maxWidth="xl">
       <Nav />
+      <Hero />
     </Box>
   );
 };

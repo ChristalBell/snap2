@@ -25,9 +25,24 @@ const Menu = ({ menuItems }: Props) => {
     >
       {menuItems.map((item) => {
         return (
-          <Typography key={item.label} sx={{ margin: ".5rem" }}>
+          <Typography
+            key={item.label}
+            sx={{
+              lineHeight: "1.65rem",
+              fontWeight: "bold",
+              color: COLORS.darkGrey,
+            }}
+          >
             {item.icon && (
-              <Image src={item.icon} alt="icon" height={16} width={16} />
+              <Image
+                src={item.icon}
+                alt="icon"
+                height={16}
+                width={16}
+                style={{
+                  paddingRight: "1rem",
+                }}
+              />
             )}
 
             {item.label}

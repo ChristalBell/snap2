@@ -13,7 +13,10 @@ const Dropdown = ({ label, menuItems }: Props) => {
 
   return (
     <Box>
-      <Typography onClick={() => setIsOpen(!isOpen)}>
+      <Typography
+        onClick={() => setIsOpen(!isOpen)}
+        sx={{ fontWeight: "bold", fontSize: "1rem", cursor: "pointer" }}
+      >
         {label} {isOpen ? "^" : "v"}
         {isOpen && <Menu menuItems={menuItems} />}
       </Typography>
