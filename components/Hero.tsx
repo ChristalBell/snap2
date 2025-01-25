@@ -8,9 +8,18 @@ import { COLORS } from "@/styles/colors";
 
 const Hero = () => {
   return (
-    <Box sx={{ display: "grid ", gridTemplateColumns: "1fr 1fr" }}>
+    <Container
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <Box className="left">
-        <Typography variant="h1"> Make remote work</Typography>
+        <Typography variant="h1">
+          {" "}
+          Make <br></br>remote work
+        </Typography>
         <Typography sx={{ color: COLORS.darkGrey }}>
           Get your team in sync, no matter your location. Streamline processes,
           create team rituals, and watch productivity soar.{" "}
@@ -47,7 +56,7 @@ const Hero = () => {
         </Box>
       </Box>
 
-      <Box className="right">
+      <Box className="right" sx={{ marginLeft: "10rem" }}>
         <Image
           src="/image-hero-desktop.png"
           alt="hero"
@@ -55,7 +64,7 @@ const Hero = () => {
           width={650}
         />
       </Box>
-    </Box>
+    </Container>
   );
 };
 
