@@ -92,9 +92,16 @@ const Nav = () => {
           sx={{
             borderRadius: ".75rem",
             border: `2px solid ${COLORS.black}`,
-            color: COLORS.black,
+            backgroundColor: COLORS.black,
+            color: COLORS.white,
             fontSize: ".75rem",
             fontWeight: "bold",
+
+            "&:hover": {
+              backgroundColor: COLORS.white,
+              color: COLORS.black,
+              border: `1px solid ${COLORS.black}`,
+            },
           }}
         >
           Register

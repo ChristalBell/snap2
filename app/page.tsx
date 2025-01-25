@@ -7,7 +7,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <Box maxWidth="xl">
+    <Box>
       <Nav />
       <Hero />
     </Box>
