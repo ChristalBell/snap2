@@ -3,7 +3,6 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import React, { useState } from "react";
 import Image from "next/image";
-import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Dropdown from "./Dropdown";
 import { COLORS } from "@/styles/colors";
@@ -42,11 +41,16 @@ const Nav = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          width: "35vw",
-          padding: "0 4rem",
+          width: "40vw",
         }}
       >
-        <Image src="/logo.svg" alt="snap logo" width={80} height={30} />
+        <Image
+          src="/logo.svg"
+          alt="snap logo"
+          width={80}
+          height={30}
+          style={{ marginLeft: "4rem" }}
+        />
         {dropdownMenuItems.map((dropdownMenuItem) => {
           return (
             <Dropdown

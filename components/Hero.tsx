@@ -8,15 +8,22 @@ import { COLORS } from "@/styles/colors";
 
 const Hero = () => {
   return (
-    <Container sx={{ display: "flex", alignItems: "center" }}>
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        padding: "0 14rem",
+      }}
+    >
       <Box className="left">
         <Typography variant="h1" sx={{ paddingTop: "12rem" }}>
           {" "}
           Make <br></br>remote work
         </Typography>
         <Typography sx={{ color: COLORS.darkGrey, padding: "2rem 0" }}>
-          Get your team in sync, no matter your location. Streamline processes,
-          create team rituals, and watch productivity soar.{" "}
+          Get your team in sync, no matter your location.<br></br> Streamline
+          processes, create team rituals,<br></br> and watch productivity soar.{" "}
         </Typography>
         <Button
           variant="outlined"
@@ -41,7 +48,7 @@ const Hero = () => {
           className="socials"
           sx={{
             display: "flex",
-            justifyContent: "space-evenly",
+            justifyContent: "space-between",
             marginTop: "8rem",
           }}
         >
@@ -62,7 +69,7 @@ const Hero = () => {
         </Box>
       </Box>
 
-      <Box className="right">
+      <Box className="right" sx={{ marginLeft: "8rem" }}>
         <Image
           src="/image-hero-desktop.png"
           alt="hero"
@@ -71,7 +78,7 @@ const Hero = () => {
           style={{ marginTop: "8rem" }}
         />
       </Box>
-    </Container>
+    </Box>
   );
 };
 
